@@ -1,5 +1,5 @@
 .app__navbar {
-  width: 100%;
+  width: 100vw;
   height: 80px;
 
   display: flex;
@@ -99,12 +99,12 @@
   height: 35px;
   border-radius: 50%;
   position: relative;
-  z-index: 999 !important;
 
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
+  z-index: 99;
 
   svg {
     width: 70%;
@@ -115,13 +115,11 @@
   div {
     position: fixed;
     top: 0;
-    bottom: 0;
     right: 0;
-    z-index: 99;
-
+    z-index: 99 !important;
     padding: 1rem;
 
-    width: 80%;
+    width: 70%;
     height: 100vh;
 
     display: flex;
@@ -183,8 +181,4 @@
   @media screen and (min-width: 900px) {
     display: none;
   }
-}
-
-menu-icon {
-  z-index: 999 !important;
 }
