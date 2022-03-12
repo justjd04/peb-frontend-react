@@ -7,9 +7,19 @@ import "./Navbar.scss";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  const setNavActive = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+  window.addEventListener("scroll", setNavActive);
 
   return (
-    <nav className="app__navbar">
+    <nav className={navbar ? "app__navbar active" : "app__navbar"}>
       <div className="app__navbar-logo">
         <img src={images.logo} alt="logo" />
       </div>
