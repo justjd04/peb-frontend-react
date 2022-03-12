@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-// import { GrPrevious, GrNext } from "react-icons/gr";
+import { GrPrevious, GrNext } from "react-icons/gr";
 import { sliderData } from "./sliderData";
 import "./Slider.scss";
 import { BsArrowRight } from "react-icons/bs";
-import { FcPrevious, FcNext } from "react-icons/fc";
+// import { FcPrevious, FcNext } from "react-icons/fc";
+import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
 
 import { urlFor, client } from "../../client";
 
@@ -51,8 +52,8 @@ const Slider = () => {
 
   return (
     <div className="slider">
-      <FcPrevious className="arrow prev" onClick={prevSlide} />
-      <FcNext className="arrow next" onClick={nextSlide} />
+      <MdNavigateBefore className="arrow prev" onClick={prevSlide} />
+      <MdNavigateNext className="arrow next" onClick={nextSlide} />
       {slides.map((slide, index) => {
         return (
           <div

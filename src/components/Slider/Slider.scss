@@ -144,16 +144,17 @@
   // background-color: transparent;
   color: #fff;
   cursor: pointer;
-  height: 2rem;
-  width: 2rem;
+  font-size: 2.5rem;
+  // height: 3rem;
+  // width: 3rem;
   // border-radius: 50%;
   position: absolute;
-  z-index: 999;
+  z-index: 1;
 }
-.arrow:hover {
-  background-color: #fff;
-  color: #777;
-}
+// .arrow:hover {
+//   background-color: #fff;
+//   color: #777;
+// }
 
 a {
   text-decoration: none !important;
@@ -179,5 +180,8 @@ a {
   // }
   .btn-text {
     font-size: 14px;
+  }
+  .arrow {
+    font-size: 2rem;
   }
 }

@@ -99,7 +99,7 @@
   height: 35px;
   border-radius: 50%;
   position: relative;
-  z-index: 999;
+  z-index: 999 !important;
 
   display: flex;
   justify-content: center;
@@ -117,7 +117,7 @@
     top: 0;
     bottom: 0;
     right: 0;
-    z-index: 5;
+    z-index: 99;
 
     padding: 1rem;
 
@@ -183,4 +183,8 @@
   @media screen and (min-width: 900px) {
     display: none;
   }
+}
+
+menu-icon {
+  z-index: 999 !important;
 }

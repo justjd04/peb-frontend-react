@@ -33,14 +33,15 @@ const Navbar = () => {
       </ul>
 
       <div className="app__navbar-menu">
-        <HiMenuAlt4 onClick={() => setToggle(true)} />
+        <HiMenuAlt4 className="menu-icon" onClick={() => setToggle(true)} />
 
         {toggle && (
           <motion.div
             whileInView={{ x: [300, 0] }}
             transition={{ duration: 0.85, ease: "easeOut" }}
+            className="nav-menu"
           >
-            <HiX onClick={() => setToggle(false)} />
+            <HiX className="menu-icon" onClick={() => setToggle(false)} />
             <ul>
               {["home", "about", "prc", "people", "contact"].map((item) => (
                 <li key={item}>
