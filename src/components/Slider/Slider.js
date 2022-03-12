@@ -5,6 +5,7 @@ import "./Slider.scss";
 import { BsArrowRight } from "react-icons/bs";
 // import { FcPrevious, FcNext } from "react-icons/fc";
 import { MdNavigateBefore, MdNavigateNext } from "react-icons/md";
+import { motion } from "framer-motion";
 
 import { urlFor, client } from "../../client";
 
@@ -70,8 +71,19 @@ const Slider = () => {
                   <a href={slide.link}>
                     <div className="btn-container">
                       <span className="circle-btn" />
-                      <BsArrowRight className="arrow-btn" />
-                      <span className="btn-text">{slide.action}</span>
+                      <motion.span
+                        whileInView={{ x: [-10, 0], opacity: [0, 1] }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                      >
+                        <BsArrowRight className="arrow-btn" />
+                      </motion.span>
+                      <motion.span
+                        whileInView={{ x: [-10, 0], opacity: [0, 1] }}
+                        transition={{ duration: 0.5, delay: 1 }}
+                        className="btn-text"
+                      >
+                        {slide.action}
+                      </motion.span>
                     </div>
                   </a>
                 </div>

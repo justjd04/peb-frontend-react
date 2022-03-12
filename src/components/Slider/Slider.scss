@@ -19,7 +19,7 @@
   height: -webkit-calc(100vh - 80px);
   height: calc(100vh - 80px);
   opacity: 0;
-  transform: translateX(50%);
+  transform: translateX(-20%);
   transition: all 0.5s ease;
 }
 
@@ -65,7 +65,7 @@
   text-align: center;
   // background: rgba(0, 0, 0, 0.3);
   animation: slide-up 1s ease 0.5s;
-  // animation-delay: 1s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
   visibility: hidden;
 }
@@ -73,11 +73,12 @@
 @keyframes slide-up {
   0% {
     visibility: visible;
-    top: 50%;
+    top: 25%;
   }
   100% {
+    opacity: 1;
     visibility: visible;
-    top: 10%;
+    top: 15%;
   }
 }
 
@@ -95,10 +96,25 @@
 .btn-container {
   position: relative;
   width: fit-content;
+  cursor: pointer;
+  pointer-events: auto;
   height: 36px;
   align-items: center;
   // padding: 0 5px;
   margin: 0 auto;
+
+  span {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  &:hover {
+    .circle-btn {
+      width: 100%;
+      border-radius: 18px;
+      transition: all 0.5s ease;
+    }
+  }
 }
 
 .circle-btn {
@@ -110,12 +126,6 @@
   border-radius: 18px;
   width: 36px;
   height: 36px;
-}
-
-.btn-container:hover > .circle-btn {
-  width: 100%;
-  border-radius: 18px;
-  transition: all 0.5s ease;
 }
 
 .arrow-btn {
