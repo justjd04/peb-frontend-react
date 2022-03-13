@@ -20,7 +20,8 @@ const Slider = () => {
     });
   }, []);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideLength = sliderData.length;
+  // const slideLength = sliderData.length;
+  const slideLength = slides.length;
 
   const autoScroll = true;
   let slideInterval;
