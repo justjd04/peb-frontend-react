@@ -77,5 +77,16 @@
 .stories-inner-carousel {
   display: flex;
   width: fit-content;
-  /* background: lightblue; */
+  background: red;
+  // transform: translate(-500px, 0);
+  // animation: move 1s;
 }
+
+// @keyframes move {
+//   0% {
+//     transform: translate(0, 0);
+//   }
+//   100% {
+//     transform: translate(-500px, 0);
+//   }
+// }
